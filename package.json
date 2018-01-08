@@ -1,0 +1,12 @@
+{
+  "name": "Flickr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "rob harris",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "vue": "^2.5.13"
+  },
+  "description": "Flick feed"
+}

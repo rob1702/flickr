@@ -1,0 +1,68 @@
+
+
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+$mobile: "(min-width: 320px) and (max-width: 480px)";
+
+$tablet-landscape: "(min-width: 768px) and (max-width: 1023px) and (orientation: landscape)";
+$mobile-landscape: "(min-width: 320px) and (max-width: 480px) and (orientation: landscape)";
+
+@media #{$tablet} {
+
+	header {
+		h1 {
+			font-size: 1.5rem;
+
+		}
+	}
+
+	#app {
+
+		#flicker-feed {
+
+			.flicker-feed-item {
+
+				flex-basis: 28%;
+			}
+		}
+	}
+
+}
+
+@media #{$desktop} {
+
+}
+
+@media #{$mobile} {
+
+	header {
+		h1 {
+			font-size: 1rem;
+
+		}
+	}
+
+	#app {
+
+		#flicker-feed {
+
+			padding-top: 60px;
+
+			.flicker-feed-item {
+
+				flex-basis: 45%;
+				margin: 15px 0;
+			}
+		}
+	}
+
+
+}
+
+@media #{$tablet-landscape} {
+
+}
+
+@media #{$mobile-landscape} {
+
+}

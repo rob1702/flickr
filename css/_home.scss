@@ -1,0 +1,98 @@
+@import "helpers";
+@import "colors";
+
+
+/*
+ FONTS
+*/
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+
+/* -------------------------
+
+	General Page Structure
+
+ ------------------------- */
+body{
+  background-color: #f5f5f5;
+
+}
+
+
+
+header{
+
+  background-color: $flickr-red;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin: 15px 0;
+
+  }
+}
+
+#app{
+
+  #flicker-feed{
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 100px;
+
+    .flicker-feed-item{
+
+      flex-basis: 20%;
+      //border: solid 1px black;
+      margin: 15px;
+      background-color: #EAEAEA;
+      padding: 10px;
+
+      h4{
+        margin-top: 20px;
+
+      }
+
+      a{
+        color: $flickr-red;
+      }
+      h5{
+        font-size: 0.9rem;
+        font-weight: 300;
+
+      }
+      h6{
+        font-weight: 300;
+
+      }
+      p{
+        font-weight: 300;
+        color: $flickr-black;
+      }
+      .description{
+        p{
+          &:first-child{
+            display: none;
+          }
+          &:nth-child(2){
+            display: none;
+          }
+        }
+
+      }
+      .tags{
+        font-size: 0.8rem;
+      }
+
+
+    }
+  }
+}

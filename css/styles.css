@@ -1,0 +1,142 @@
+/*
+	Variables
+*/
+/* -------------------------
+
+   Mixins
+
+ ------------------------- */
+/* -------------------------
+
+   Classes
+
+ ------------------------- */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+.clearfix:after {
+  clear: both; }
+
+.flicker-fix {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  transform: translateZ(0); }
+
+.image-wrap img {
+  width: 100%; }
+
+/*
+
+ALL Project colours go in here. Moved from 'helpers' as it wasn't obvious.
+
+*/
+/*
+	Components
+*/
+/*
+	Pages
+*/
+/* -------------------------
+
+   Mixins
+
+ ------------------------- */
+/* -------------------------
+
+   Classes
+
+ ------------------------- */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+.clearfix:after {
+  clear: both; }
+
+.flicker-fix {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  transform: translateZ(0); }
+
+.image-wrap img {
+  width: 100%; }
+
+/*
+
+ALL Project colours go in here. Moved from 'helpers' as it wasn't obvious.
+
+*/
+/*
+ FONTS
+*/
+* {
+  font-family: 'Lato', sans-serif; }
+
+/* -------------------------
+
+	General Page Structure
+
+ ------------------------- */
+body {
+  background-color: #f5f5f5; }
+
+header {
+  background-color: #bc0024;
+  position: fixed;
+  width: 100%;
+  z-index: 10; }
+  header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin: 15px 0; }
+
+#app #flicker-feed {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 100px; }
+  #app #flicker-feed .flicker-feed-item {
+    flex-basis: 20%;
+    margin: 15px;
+    background-color: #EAEAEA;
+    padding: 10px; }
+    #app #flicker-feed .flicker-feed-item h4 {
+      margin-top: 20px; }
+    #app #flicker-feed .flicker-feed-item a {
+      color: #bc0024; }
+    #app #flicker-feed .flicker-feed-item h5 {
+      font-size: 0.9rem;
+      font-weight: 300; }
+    #app #flicker-feed .flicker-feed-item h6 {
+      font-weight: 300; }
+    #app #flicker-feed .flicker-feed-item p {
+      font-weight: 300;
+      color: #212322; }
+    #app #flicker-feed .flicker-feed-item .description p:first-child {
+      display: none; }
+    #app #flicker-feed .flicker-feed-item .description p:nth-child(2) {
+      display: none; }
+    #app #flicker-feed .flicker-feed-item .tags {
+      font-size: 0.8rem; }
+
+/*
+	Media Queries
+*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  header h1 {
+    font-size: 1.5rem; }
+
+  #app #flicker-feed .flicker-feed-item {
+    flex-basis: 28%; } }
+@media (min-width: 320px) and (max-width: 480px) {
+  header h1 {
+    font-size: 1rem; }
+
+  #app #flicker-feed {
+    padding-top: 60px; }
+    #app #flicker-feed .flicker-feed-item {
+      flex-basis: 45%;
+      margin: 15px 0; } }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+
+	<title>Flickr Holiday Feed | Rob Harris</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Rob Harris">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+
+	<script>document.write('<script src="https://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</head>
+<body>
+
+<div id="app">
+
+	<header v-if="flicker.title">
+		<h1>{{flicker.title}}</h1>
+	</header>
+
+	<div id="flicker-feed" v-if="flicker.items">
+
+		<div class="flicker-feed-item" v-for="item in flicker.items">
+			<div class="flicker-img">
+				<a v-bind:href="item.link" target="_blank"><img v-bind:src="item.media.m" width="100%" height="auto" alt=""></a>
+			</div>
+			<h4>
+				<a v-bind:href="item.link" target="_blank">
+					{{item.title}}
+				</a>
+			</h4>
+			<h5>
+				By:
+				<!--'https://www.flickr.com/photos/'-->
+				<a v-bind:href="getAuthorURl(item.author_id)" target="_blank">
+				{{item.author}}
+				</a>
+			</h5>
+
+			<h6>Description:</h6>
+			<div v-html="item.description" class="description"></div>
+
+			<p class="tags">Tags : {{item.tags}}</p>
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src='./app/js/flickerApp.js'></script>
+
+
+</body>
+</html>
